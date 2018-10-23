@@ -1,7 +1,5 @@
 <?php
 
-use Lvyun\Sort\QuickSort;
-
 require 'bootstrap.php';
 
 class QuickSortTest extends PHPUnit_Framework_TestCase
@@ -11,8 +9,7 @@ class QuickSortTest extends PHPUnit_Framework_TestCase
      */
     public function testSort(array $srcArr, array $expected)
     {
-        $quick = new QuickSort();
-        $new = $quick->sort($srcArr);
+        $new = \Lvyun\Sort\quickSort($srcArr);
         $this->assertEquals($expected, $new);
     }
 
